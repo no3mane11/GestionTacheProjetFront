@@ -1,0 +1,81 @@
+:root {
+  --primary: #1976d2;
+  --primary-dark: #1255a4;
+  --text-dark: #2e3a59;
+  --bg-light: #f4f6f9;
+  --bg-white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.08);
+}
+
+.collab-page {
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text-dark);
+  background: var(--bg-light);
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-bottom: 24px;
+}
+.page-title svg {
+  font-size: 38px;
+  color: var(--primary);
+}
+
+.table-paper {
+  background: var(--bg-white) !important;
+  box-shadow: 0 4px 12px var(--shadow) !important;
+  border-radius: 10px !important;
+}
+
+.toolbar-enhanced {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.MuiButton-containedPrimary {
+  background-color: var(--primary) !important;
+  color: var(--bg-white) !important;
+  text-transform: none !important;
+  font-weight: 500;
+  box-shadow: 0 2px 6px var(--shadow) !important;
+}
+.MuiButton-containedPrimary:hover {
+  background-color: var(--primary-dark) !important;
+}
+
+.MuiTableHead-root th {
+  background-color: var(--primary) !important;
+  color: var(--bg-white) !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  text-align: center;
+}
+
+.MuiTableBody-root {
+  background-color: var(--bg-white);
+}
+.MuiTableBody-root td {
+  text-align: center;
+  padding: 12px;
+  color: var(--text-dark);
+  border-bottom: 1px solid #eaeaea;
+}
+
+.MuiIconButton-root {
+  transition: transform 0.15s ease;
+}
+.MuiIconButton-root:hover {
+  transform: scale(1.1);
+}
+.MuiTableContainer-root {
+  overflow-x: auto !important;
+}

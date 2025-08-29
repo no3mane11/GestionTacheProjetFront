@@ -1,0 +1,161 @@
+:root {
+  --primary: #1976d2;
+  --primary-dark: #1255a4;
+  --success: #2ecc71;
+  --warning: #f1c40f;
+  --danger: #e74c3c;
+  --text-dark: #2e3a59;
+  --text-muted: #6b7280;
+  --bg-light: #f4f6f9;
+  --bg-white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+.planning-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-light);
+  min-height: 100vh;
+}
+
+.planning-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.loading, .no-task {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+/* --- TIMELINE --- */
+.timeline {
+  position: relative;
+  margin-top: 2rem;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 4px;
+  height: 100%;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -1px;
+  width: 20px;
+  height: 20px;
+  background: var(--primary);
+  border-radius: 50%;
+  border: 3px solid var(--bg-light);
+  z-index: 2;
+  transform: translateX(-50%);
+}
+
+.timeline-content {
+  margin-left: 40px;
+  flex: 1;
+}
+
+/* --- CARDS --- */
+.tache-card {
+  background: var(--bg-white);
+  border-radius: 14px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 12px var(--shadow);
+  transition: 0.3s ease;
+  border-top: 6px solid var(--primary);
+}
+
+.tache-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px var(--shadow);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tache-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tache-info {
+  margin-top: 0.6rem;
+  font-size: 0.92rem;
+  color: var(--text-dark);
+}
+
+.tache-info p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0;
+}
+
+.badge {
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.badge-high {
+  background-color: #fdecea;
+  color: var(--danger);
+}
+
+.badge-medium {
+  background-color: #fff4e5;
+  color: var(--warning);
+}
+
+.badge-low {
+  background-color: #eafaf1;
+  color: var(--success);
+}
+
+/* Progress Bar */
+.progress-bar-container {
+  margin-top: 0.8rem;
+  background: #eee;
+  height: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  transition: width 0.5s ease;
+}

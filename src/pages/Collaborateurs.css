@@ -1,0 +1,114 @@
+:root {
+  --primary: #1976d2;         /* Bleu corporate */
+  --primary-dark: #1255a4;    /* Variante foncée */
+  --secondary: #0085ff;
+  --text-dark: #2e3a59;
+  --text-muted: #6b7280;
+  --bg-light: #f4f6f9;
+  --bg-white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.08);
+}
+
+/* ----- Page Collaborateurs ----- */
+.collab-page {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  color: var(--text-dark);
+  background: var(--bg-light);
+  min-height: 100vh;
+  padding: 30px;
+}
+
+/* ----- Titre principal ----- */
+.MuiTypography-h4 {
+  font-weight: 600 !important;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--primary-dark);
+}
+
+/* Icône du header */
+.MuiTypography-h4 svg {
+  font-size: 38px;
+  color: var(--primary);
+}
+
+/* ----- Cards/Form/Table container ----- */
+.MuiPaper-root {
+  background: var(--bg-white) !important;
+  box-shadow: 0 4px 12px var(--shadow) !important;
+  border-radius: 10px !important;
+}
+
+/* ----- Boutons principaux ----- */
+.MuiButton-containedPrimary {
+  background-color: var(--primary) !important;
+  color: var(--bg-white) !important;
+  text-transform: none !important;
+  font-weight: 500;
+  box-shadow: 0 2px 6px var(--shadow) !important;
+}
+
+.MuiButton-containedPrimary:hover {
+  background-color: var(--primary-dark) !important;
+}
+
+/* ----- Boutons secondaires ----- */
+.MuiButton-outlinedSecondary {
+  border-color: var(--primary) !important;
+  color: var(--primary) !important;
+  text-transform: none !important;
+}
+
+.MuiButton-outlinedSecondary:hover {
+  background-color: var(--primary) !important;
+  color: var(--bg-white) !important;
+}
+
+/* ----- Champs de texte ----- */
+.MuiTextField-root .MuiInputBase-root {
+  background: var(--bg-white);
+  border-radius: 6px;
+  box-shadow: 0 1px 2px var(--shadow);
+}
+
+.MuiTextField-root input {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+/* ----- Fichier upload ----- */
+input[type="file"] {
+  font-size: 0.85rem;
+  margin-top: 8px;
+  color: var(--text-muted);
+}
+
+/* ----- Tableau (Head) ----- */
+.MuiTableHead-root th {
+  color: var(--bg-white) !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  background-color: var(--primary) !important;
+  text-align: center;
+}
+
+/* ----- Tableau (Body) ----- */
+.MuiTableBody-root {
+  background-color: var(--bg-white);
+}
+
+.MuiTableBody-root td {
+  text-align: center;
+  padding: 12px;
+  color: var(--text-dark);
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* ----- Images (avatars) ----- */
+img {
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  box-shadow: 0 2px 6px var(--shadow);
+}

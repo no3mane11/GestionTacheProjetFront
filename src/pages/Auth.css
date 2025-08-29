@@ -1,0 +1,102 @@
+:root {
+  --primary: #1976d2;
+  --primary-dark: #1255a4;
+  --bg-light: #f4f6f9;
+  --white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --text-dark: #2c3e50;
+}
+
+.auth-page {
+  background: linear-gradient(135deg, #f4f6f9 0%, #dbeafe 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.auth-container {
+  max-width: 420px;
+  width: 90%;
+  padding: 40px 30px;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px var(--shadow);
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.auth-logo {
+  width: 120px;
+  margin-bottom: 20px;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.auth-container h2 {
+  margin-bottom: 25px;
+  color: var(--text-dark);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.auth-container input:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.15);
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.auth-container button:hover {
+  background-color: var(--primary-dark);
+}
+
+.auth-container p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.auth-container a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.file-label {
+  display: block;
+  margin-top: 10px;
+  text-align: left;
+  font-size: 14px;
+  color: #555;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}

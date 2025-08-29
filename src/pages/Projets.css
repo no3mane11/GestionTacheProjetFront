@@ -1,0 +1,59 @@
+:root {
+  --primary: #1976d2;
+  --primary-dark: #0d47a1;
+  --accent: #ff6f61;
+  --text-dark: #2e3a59;
+  --bg-light: #f4f6f9;
+  --bg-white: #ffffff;
+  --bg-card: rgba(255,255,255,0.95);
+}
+
+.projets-page {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  color: var(--text-dark);
+  background: linear-gradient(135deg, #eef2f7, #dfe9f3);
+  min-height: 100vh;
+  padding: 30px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Carte du tableau */
+.table-card {
+  border-radius: 16px !important;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  background: var(--bg-card) !important;
+}
+
+/* Carte du formulaire isolé */
+.form-card {
+  max-width: 480px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--bg-card);
+  box-shadow: 0 15px 35px rgba(25,118,210,0.15);
+  backdrop-filter: blur(15px);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Icônes d'action */
+.icon-button {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.icon-button:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}

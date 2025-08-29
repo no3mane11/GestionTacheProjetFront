@@ -1,0 +1,241 @@
+:root {
+  --primary: #1976d2;
+  --primary-dark: #1255a4;
+  --secondary: #00c6ff;
+  --accent: #ff4081;
+  --success: #4caf50;
+  --warning: #ff9800;
+  --danger: #f44336;
+  --bg-light: #f4f6f9;
+  --bg-dark: #1a1d29;
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.25);
+  --shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.ia-container {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  min-height: 100vh;
+  padding: 30px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.3s ease-in-out;
+}
+
+/* 🌙 Dark mode */
+.ia-container.dark {
+  background: var(--bg-dark);
+  color: #f1f1f1;
+}
+
+/* Titre principal */
+.ia-title {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.ia-description {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* 🔘 Boutons */
+.ia-buttons,
+.ia-prediction-zone,
+.ia-libre-zone,
+.ia-export-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.ia-button {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.ia-button:hover {
+  transform: translateY(-2px) scale(1.02);
+  background: var(--primary-dark);
+}
+
+/* 🔮 Zone prédiction */
+.ia-prediction-zone select {
+  padding: 0.5rem 0.8rem;
+  border-radius: 25px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  color: white;
+  font-size: 0.95rem;
+  outline: none;
+  backdrop-filter: blur(10px);
+}
+
+.ia-prediction-zone select option {
+  color: black;
+}
+
+/* 💬 Question libre */
+.ia-textarea {
+  width: 100%;
+  max-width: 500px;
+  min-height: 80px;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  padding: 12px;
+  margin-bottom: 10px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  color: white;
+  resize: vertical;
+  font-size: 0.95rem;
+}
+
+.ia-container.dark .ia-textarea {
+  color: #fff;
+}
+
+/* 🤔 IA réfléchit */
+.ia-thinking {
+  font-style: italic;
+  color: #ffeb3b;
+  margin: 1rem 0;
+}
+
+/* ✅ Résultat IA */
+.ia-result {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 1rem;
+  padding: 1rem 1.2rem;
+  border-radius: 15px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow);
+  text-align: left;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.ia-result-header {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary);
+}
+
+.ia-text {
+  margin: 0.3rem 0;
+}
+
+.ia-task {
+  list-style: "📝 ";
+  margin-left: 1.2rem;
+  color: #ffe;
+}
+
+.ia-suggestion {
+  background: rgba(0,255,255,0.15);
+  padding: 0.4rem 0.6rem;
+  border-left: 4px solid #26c6da;
+  font-style: italic;
+  border-radius: 6px;
+  margin: 0.3rem 0;
+}
+
+.ia-alert {
+  background: rgba(255,0,0,0.15);
+  padding: 0.4rem 0.6rem;
+  border-left: 4px solid #e53935;
+  font-weight: bold;
+  border-radius: 6px;
+  margin: 0.3rem 0;
+}
+
+/* ⭕ Indicateur circulaire */
+.ia-chart {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.chart-circle {
+  width: 140px;
+  height: 140px;
+  margin: 1rem auto;
+  border-radius: 50%;
+  background: conic-gradient(var(--success) var(--progress, 0%), #ddd 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.chart-circle span {
+  position: absolute;
+  text-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+/* 🔄 Animation */
+@keyframes fadeIn {
+  from {opacity:0; transform: translateY(8px);}
+  to {opacity:1; transform: translateY(0);}
+}
+
+/* 🌙 Dark mode */
+.ia-container.dark .ia-result {
+  background: rgba(255,255,255,0.08);
+  color: #f1f1f1;
+}
+
+.ia-error {
+  color: var(--danger);
+  font-weight: 600;
+  margin-top: 1rem;
+  text-shadow: 0 0 4px rgba(0,0,0,0.3);
+}
+
+/* Mode toggle */
+.mode-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.mode-toggle button {
+  background-color: transparent;
+  border: 1px solid var(--glass-border);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: white;
+  backdrop-filter: blur(8px);
+  transition: 0.3s;
+}
+
+.mode-toggle button:hover {
+  background-color: var(--glass-bg);
+}
